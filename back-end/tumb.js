@@ -1,8 +1,8 @@
  import request from "request";
 
 var oauth ={
-    consumer_key: 'BAPDmD2J0aPPMXog6EAAlTBIGsEJOwCQN13Dn9GKCAy76ZiKb4',
-    consumer_secret: 'imbQ4459wKN81aMgMJjSVTMg87N03g9vi1xnCqJYmhGDupNJRr',
+    consumer_key: '',
+    consumer_secret: '',
 };
 var url = 'https://www.tumblr.com/oauth/request_token'
 
