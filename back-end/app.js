@@ -1,18 +1,19 @@
 import express from 'express'
-import { connectDB } from './src/config/db.js'
-import _middlewares from './src/middlewares/app.js'
 import passport from 'passport'
+import { connectDB } from './src/config/db.js'
 import { linkedinOauth, twitterOauth } from './src/config/passport.js'
+import _middlewares from './src/middlewares/app.js'
+
+
 
 const app = express()
-
-// strategies
-linkedinOauth(passport)
-twitterOauth(passport)
 
 export const run = () => {
 
     _middlewares(app)
+    // Strategies
+    linkedinOauth(passport)
+    twitterOauth(passport)
 
     connectDB()
         .then(() => {
